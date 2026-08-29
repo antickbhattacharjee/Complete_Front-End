@@ -56,16 +56,45 @@ While browsers are smart enough to render random HTML tags, a professional webpa
 ## 5. Common Mistakes
 - Putting visible content (like `<h1>`) inside the `<head>` tag. It must go in the `<body>`.
 - Forgetting the `<!DOCTYPE html>` declaration, which can cause older browsers to render the page incorrectly.
+- Forgetting the `lang` attribute on the `<html>` tag (important for screen readers and search engines).
+- Not including the viewport meta tag (pages won't be responsive on mobile).
 
 ## 6. Best Practices
 - Always include `<meta charset="UTF-8">` to ensure special characters (like emojis or accents) display correctly.
 - Always include the viewport meta tag for mobile responsiveness (we will use this heavily in CSS).
+- Always include a meaningful `<title>` (appears in browser tab and is critical for SEO).
+- Use proper indentation (2 or 4 spaces) to make code readable.
+- Use lowercase for all HTML tags and attributes.
 
-## 7. Trainer Notes
+## 7. Accessibility Considerations
+- The `lang` attribute on `<html>` tells screen readers and search engines the page language.
+- The `<title>` should be descriptive and unique for each page (screen reader users hear this first).
+- Proper document structure with `<head>` and `<body>` ensures assistive technologies can navigate the page correctly.
+- Meta charset ensures international characters display correctly.
+
+## 8. Trainer Notes
 - Show the students how to type `!` and press `Enter` in VS Code to auto-generate the HTML boilerplate. This saves a lot of time.
 - Demonstrate changing the `<title>` and observing the browser tab update.
+- Explain that the viewport meta tag is why websites look good on phones (we'll see this when we study CSS).
+- Emphasize: "Valid HTML structure is the foundation for CSS styling and JavaScript manipulation."
 
-## 8. Quick Revision
-- `<!DOCTYPE html>` = HTML5.
-- `<head>` = Invisible settings and title.
-- `<body>` = Visible content.
+## 9. Quick Revision Checklist
+- [ ] `<!DOCTYPE html>` appears first (before even opening `<html>` tag)
+- [ ] `<html lang="en">` wraps everything
+- [ ] `<head>` contains metadata (invisible except `<title>`)
+- [ ] `<body>` contains all visible content
+- [ ] `<meta charset="UTF-8">` enables special characters
+- [ ] `<meta name="viewport">` enables mobile responsiveness
+- [ ] `<title>` is meaningful and descriptive
+- [ ] Code is properly indented for readability
+- [ ] All tags and attributes are lowercase
+- [ ] Structure: DOCTYPE → html → (head + body) → /html
+
+## 10. Knowledge Check Questions
+1. What is the purpose of `<!DOCTYPE html>`?
+2. Why is the `lang` attribute on the `<html>` tag important?
+3. What goes in the `<head>` vs. the `<body>`?
+4. What does the viewport meta tag do?
+5. Why is the `<title>` tag important?
+6. Can visible content (like `<h1>`) go in the `<head>`? Why or why not?
+7. What character encoding should you use and why?

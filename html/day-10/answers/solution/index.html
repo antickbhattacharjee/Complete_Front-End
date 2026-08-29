@@ -26,7 +26,7 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <img src="https://via.placeholder.com/150" alt="Headshot of Jane Doe">
+            <img src="assets/profile.jpg" alt="Headshot of Jane Doe" width="150" height="150">
             <p>Hello! I am an aspiring Front-End Developer with a passion for building accessible and fast web applications.</p>
             <p>I am currently undertaking a 30-day intensive training program to master HTML, CSS, and JavaScript.</p>
         </section>
@@ -46,23 +46,42 @@
         <!-- Education Table Section -->
         <section id="education">
             <h2>Education & Experience</h2>
-            <table border="1">
-                <tr>
-                    <th>Year</th>
-                    <th>Institution</th>
-                    <th>Degree / Role</th>
-                </tr>
-                <tr>
-                    <td>2022 - 2026</td>
-                    <td>University of Technology</td>
-                    <td>B.S. Computer Science</td>
-                </tr>
-                <tr>
-                    <td>2025 - Present</td>
-                    <td>Tech Corp</td>
-                    <td>Web Developer Intern</td>
-                </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Institution</th>
+                        <th>Degree / Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2022 - 2026</td>
+                        <td>University of Technology</td>
+                        <td>B.S. Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td>2025 - Present</td>
+                        <td>Tech Corp</td>
+                        <td>Web Developer Intern</td>
+                    </tr>
+                </tbody>
             </table>
+            <style>
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                    font-weight: bold;
+                }
+            </style>
         </section>
 
         <!-- Contact Form Section -->

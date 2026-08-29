@@ -53,15 +53,47 @@ alert("Welcome to my website!");
 ## 5. Common Mistakes
 - **Putting the `<script>` tag in the `<head>`**: While possible, if your JS tries to manipulate HTML elements before the body has loaded, it will crash. It is best practice for beginners to put the `<script>` tag at the very bottom of the `<body>`.
 - **Forgetting quotes in console.log**: `console.log(Hello);` will cause an error because the computer thinks `Hello` is a variable. Use quotes: `console.log("Hello");`.
+- **Mixing internal and external script tags**: Keep them separate - use external for production code, internal only for demos/inline scripts.
+- **Not checking the console for errors**: Always open DevTools to see what's actually happening.
 
 ## 6. Best Practices
-- Always use External `.js` files to keep your HTML clean.
-- Use `console.log()` frequently to check if your code is actually running.
+- Always use External `.js` files to keep your HTML clean and maintainable.
+- Use `console.log()` frequently during development to check if your code is actually running.
+- Put `<script>` tags at the very bottom of `<body>` (not in `<head>`) so HTML loads first.
+- Use meaningful variable and function names.
+- Never leave debugging code in production (remove `console.log()` calls before deploying).
 
-## 7. Trainer Notes
-- Show students how to open Chrome DevTools (F12 or Right Click -> Inspect) and navigate to the "Console" tab. Have them type `2 + 2` directly into the console to show that it is a live JS environment.
+## 7. Accessibility Considerations
+- Ensure JavaScript enhancements don't break keyboard navigation.
+- Don't rely on JavaScript alone for critical functionality (progressive enhancement).
+- Use semantic HTML elements (buttons, not divs) so screen readers understand interactive elements.
+- Provide text alternatives for any JavaScript-generated content.
 
-## 8. Quick Revision
-- JS = Logic/Interactivity.
-- Link via `<script src="file.js"></script>`.
-- Use `console.log("text")` for testing.
+## 8. Trainer Notes
+- Show students how to open Chrome DevTools (F12 or Right Click -> Inspect) and navigate to the "Console" tab.
+- Have them type `2 + 2` directly into the console to show that it is a live JS environment (REPL - Read, Eval, Print, Loop).
+- Demonstrate the error console - show what happens when you forget quotes or make syntax errors.
+- Explain that JavaScript errors in console won't break the HTML/CSS rendering; they just prevent the JS from running.
+- Time for a discussion: "What would this website do if JavaScript is disabled?" (Progressive enhancement)
+
+## 9. Quick Revision Checklist
+- [ ] JS = Logic/Interactivity for websites
+- [ ] Link external JS with `<script src="file.js"></script>` at bottom of `<body>`
+- [ ] `console.log("text")` prints to the browser console (for debugging)
+- [ ] Open DevTools with F12 or Right-Click → Inspect
+- [ ] Comments: single-line with `//`, multi-line with `/* */`
+- [ ] `alert()` shows popup dialog (use sparingly for debugging only)
+- [ ] JavaScript runs after HTML is loaded (why we put `<script>` at bottom)
+- [ ] Check the console for errors when debugging
+- [ ] External scripts keep HTML clean and organized
+- [ ] Never use `console.log()` in production code
+
+## 10. Knowledge Check Questions
+1. What does JavaScript do in a web page?
+2. What are the three main differences between HTML, CSS, and JavaScript?
+3. Why should you put `<script>` tags at the bottom of `<body>` instead of in `<head>`?
+4. What does `console.log()` do?
+5. How do you open the browser's Developer Tools?
+6. What is the difference between internal and external JavaScript?
+7. What will happen if you type `console.log(Hello);` without quotes around Hello?
+8. Why is it bad practice to use `alert()` in production code?
