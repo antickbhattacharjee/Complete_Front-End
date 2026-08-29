@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Accessible Forms & Images</h1>
+    </header>
+    <main>
+        <!-- Instructor Note: aria-label provides a hidden label specifically for screen readers -->
+        <nav aria-label="Main Navigation">
+            <a href="/">Home</a>
+        </nav>
+        
+        <section>
+            <!-- Instructor Note: Purely decorative images can have an empty alt="" attribute -->
+            <img src="https://via.placeholder.com/100" alt="Company Logo">
+            
+            <form>
+                <!-- Instructor Note: Inputs without visible text labels must use aria-label -->
+                <input type="text" aria-label="Search the website" placeholder="Search...">
+                <button type="submit">Go</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

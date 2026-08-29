@@ -1,0 +1,37 @@
+/* 
+  Instructor Note: Positioning allows elements to break out of the normal document flow.
+*/
+
+body { margin: 0; font-family: sans-serif; }
+
+/* Sticky: Toggles between relative and fixed depending on scroll position */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    z-index: 100;
+}
+
+/* Relative: The anchor point for absolutely positioned children */
+.relative-container {
+    position: relative;
+    background: #ecf0f1;
+    padding: 50px;
+    margin: 20px;
+    height: 200px;
+}
+
+/* Absolute: Positioned exactly relative to its nearest positioned ancestor */
+.absolute-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.spacer { height: 1000px; background: linear-gradient(white, gray); }

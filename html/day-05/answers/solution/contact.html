@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Contact Form</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <!-- 
+                Forms should have an 'action' (where data goes) and 'method' (how it's sent).
+                POST is used for sensitive data, GET for search queries.
+            -->
+            <form action="/submit-endpoint" method="POST">
+                
+                <!-- Grouping related inputs improves structure -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <!-- 
+                        <label> uses the 'for' attribute to bind to an <input>'s 'id'.
+                        This means clicking the label text focuses the input box.
+                    -->
+                    <div>
+                        <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                    </div>
+                    
+                    <div>
+                        <label for="emailAddr">Email Address <span aria-hidden="true">*</span></label>
+                        <!-- type="email" automatically validates email formatting -->
+                        <input type="email" id="emailAddr" name="emailAddr" required placeholder="john@example.com">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Your Message</legend>
+                    <div>
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                </fieldset>
+                
+                <!-- The submit button triggers the form action -->
+                <button type="submit">Send Message</button>
+                
+            </form>
+        </section>
+    </main>
+</body>
+</html>

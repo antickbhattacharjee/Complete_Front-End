@@ -1,0 +1,18 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background: #f4f4f9; display: flex; justify-content: center; padding: 50px 20px; }
+.container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+h1 { text-align: center; color: #333; margin-top: 0; }
+
+form { display: flex; gap: 10px; margin-bottom: 20px; }
+input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+button { padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+button:hover { background: #1d4ed8; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+li { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #eee; transition: background 0.2s; }
+li:hover { background: #f9f9f9; }
+
+.movie-title { cursor: pointer; flex: 1; }
+.watched .movie-title { text-decoration: line-through; color: #999; }
+.delete-btn { background: #ef4444; padding: 5px 10px; font-size: 12px; }
+.delete-btn:hover { background: #dc2626; }

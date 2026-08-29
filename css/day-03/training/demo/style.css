@@ -1,0 +1,29 @@
+/* 
+  Instructor Note: Use a font pairing (e.g. Serif for headings, Sans-serif for body).
+*/
+:root {
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Open Sans', sans-serif;
+    --text-color: #333;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6; /* Improves readability by spacing out lines */
+    padding: 2rem;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-style: italic;
+    color: #666;
+    letter-spacing: 1px;
+}

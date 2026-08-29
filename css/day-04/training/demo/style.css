@@ -1,0 +1,26 @@
+/* 
+  Instructor Note: The Box Model determines how elements are sized.
+  Padding clears area around content (inside border).
+  Margin clears area outside the border.
+*/
+
+body { padding: 50px; font-family: sans-serif; }
+
+.box {
+    width: 200px;
+    padding: 30px;
+    border: 10px solid #3498db;
+    margin-bottom: 30px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+/* Default behavior: width + padding + border = total actual width (280px) */
+.box--content {
+    box-sizing: content-box;
+}
+
+/* Professional standard: width is strictly 200px. Padding/border squeeze inward. */
+.box--border {
+    box-sizing: border-box;
+}

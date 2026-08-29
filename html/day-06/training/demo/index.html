@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+    <main>
+        <!-- Instructor Note: The action attribute specifies where to send form data. -->
+        <form action="/submit" method="POST">
+            <div>
+                <!-- Instructor Note: The 'for' attribute strictly ties the label to the input's 'id'. -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <br>
+            <div>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" required minlength="8">
+            </div>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+</body>
+</html>

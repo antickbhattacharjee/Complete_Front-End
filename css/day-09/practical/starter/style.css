@@ -1,0 +1,23 @@
+/* 
+  ========================================
+  Day 09 Starter Styles
+  Instructor Note: Always start by resetting box-sizing!
+  ========================================
+*/
+:root {
+    --main-color: #2c3e50;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--main-color);
+    padding: 20px;
+}
+
+/* TODO: Add your day 09 styles below */

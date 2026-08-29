@@ -1,0 +1,6 @@
+.alert-danger {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid red;
+    border-radius: 5px;
+}

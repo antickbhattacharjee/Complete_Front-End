@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API & Promises</title>
+    <style>
+        :root { --primary: #2b6cb0; --bg: #f7fafc; --text: #2d3748; }
+        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); padding: 2rem; max-width: 600px; margin: 0 auto; }
+        button { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 1rem; margin-bottom: 20px; }
+        button:hover { background: #2c5282; }
+        .user-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .error { color: #e53e3e; background: #fed7d7; padding: 15px; border-radius: 4px; }
+        .loading { font-style: italic; color: #718096; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>User Data Fetcher</h1>
+        <button id="fetchBtn">Load Random User</button>
+        <!-- Data will be injected here -->
+        <section id="result" aria-live="polite"></section>
+    </main>
+    
+    <!-- Scripts should ideally be placed at the end of the body, or use 'defer' in the head -->
+    <script src="fetch_app.js"></script>
+</body>
+</html>

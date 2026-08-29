@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <h1>Jane Doe</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="https://via.placeholder.com/150" alt="Headshot of Jane Doe">
+            <p>Hello! I am an aspiring Front-End Developer with a passion for building accessible and fast web applications.</p>
+            <p>I am currently undertaking a 30-day intensive training program to master HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Semantic HTML5</li>
+                <li>Web Accessibility (a11y)</li>
+                <li>CSS3 (Learning soon)</li>
+                <li>JavaScript (Learning soon)</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Education Table Section -->
+        <section id="education">
+            <h2>Education & Experience</h2>
+            <table border="1">
+                <tr>
+                    <th>Year</th>
+                    <th>Institution</th>
+                    <th>Degree / Role</th>
+                </tr>
+                <tr>
+                    <td>2022 - 2026</td>
+                    <td>University of Technology</td>
+                    <td>B.S. Computer Science</td>
+                </tr>
+                <tr>
+                    <td>2025 - Present</td>
+                    <td>Tech Corp</td>
+                    <td>Web Developer Intern</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <br>
+                
+                <div>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+                
+                <div>
+                    <label for="msg">Message:</label><br>
+                    <textarea id="msg" name="msg" rows="4" cols="40" required></textarea>
+                </div>
+                <br>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Jane Doe. Built with standard HTML5.</p>
+    </footer>
+
+</body>
+</html>

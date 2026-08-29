@@ -1,0 +1,24 @@
+/* 
+  ========================================
+  Day 09 Professional Demo Styles
+  Instructor Note: Notice the clean, modular structure.
+  ========================================
+*/
+:root {
+    --bg: #f9f9f9;
+    --text: #333;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+}

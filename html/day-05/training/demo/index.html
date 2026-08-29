@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and Tables Demo</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; max-width: 400px; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Organizing Data</h1>
+    </header>
+    <main>
+        <section>
+            <h2>My Favorite Languages</h2>
+            <!-- Instructor Note: <ul> is for unordered (bulleted) lists -->
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>User Data Table</h2>
+            <!-- Instructor Note: <table> should strictly be used for tabular data, NOT for layout -->
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alice</td>
+                        <td>Developer</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>Designer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
