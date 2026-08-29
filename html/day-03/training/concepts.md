@@ -17,7 +17,7 @@ Webpages are mostly text. HTML provides specific tags to format this text. While
 - `<h1>` to `<h6>`: Headings. `<h1>` is the most important, `<h6>` is the least.
 - `<b>` vs `<strong>`: Both make text bold. However, `<strong>` is *semantic*—it tells screen readers that the text is strictly important.
 - `<i>` vs `<em>`: Both make text italic. `<em>` indicates emphasis.
-- `<br>` and `<hr>` are "empty elements" or "self-closing tags". They do not have a closing tag.
+- `<br>` and `<hr>` are void elements. In HTML, void elements (such as `<img>`, `<br>`, `<hr>`, `<input>`, and `<meta>`) cannot contain child content and do not have closing tags.
 
 ## 4. Examples
 

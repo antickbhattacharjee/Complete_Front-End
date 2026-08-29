@@ -43,8 +43,13 @@ HTML is constantly evolving. Many UI components that used to require dozens of l
 
 ### Practical Example (Embedded YouTube Video)
 ```html
-<!-- YouTube provides this exact iframe code when you click "Share -> Embed" -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+<!-- YouTube provides embed code that you can customize with CSS -->
+<style>
+    iframe {
+        border: none;  /* Remove border using CSS instead of frameborder attribute */
+    }
+</style>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
 ```
 
 ## 5. Common Mistakes

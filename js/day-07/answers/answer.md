@@ -64,7 +64,7 @@ const nameEl = document.getElementById("profileName");
 const bioEl = document.getElementById("profileBio");
 
 // 2. Modify the elements
-pic.src = "https://via.placeholder.com/150";
+pic.src = "assets/profile-placeholder.svg";
 nameEl.textContent = "Jane Developer";
 bioEl.textContent = "I love manipulating the DOM with JavaScript!";
 

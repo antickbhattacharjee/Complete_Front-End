@@ -1,0 +1,119 @@
+/* Movie Watchlist App - Starter Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#movie-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#movie-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#movie-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+button[type="submit"],
+.delete-btn {
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover,
+.delete-btn:hover {
+    background: #764ba2;
+}
+
+#movie-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#movie-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    gap: 10px;
+}
+
+#movie-list li:last-child {
+    border-bottom: none;
+}
+
+.movie-title {
+    flex: 1;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.movie-title:hover {
+    background: #f0f0f0;
+}
+
+.movie-title.watched {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 30px;
+    font-style: italic;
+}

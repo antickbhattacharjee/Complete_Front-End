@@ -2,7 +2,7 @@ const pic = document.getElementById("profilePic");
 const nameEl = document.getElementById("profileName");
 const bioEl = document.getElementById("profileBio");
 
-pic.src = "https://via.placeholder.com/150";
+pic.src = "assets/profile-placeholder.svg";
 nameEl.textContent = "Jane Developer";
 bioEl.textContent = "I love manipulating the DOM with JavaScript!";
 

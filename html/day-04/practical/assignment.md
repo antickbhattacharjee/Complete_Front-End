@@ -15,5 +15,5 @@ Create a "Favorite Band/Artist" fan page.
 2. Add a main heading with the artist's name.
 3. Below the heading, display a photo of the artist (using a web URL).
 4. Write a short paragraph about them.
-5. Create a link saying "Read more on Wikipedia" that links to their wiki page and opens in a new tab.
-6. Make the artist's photo clickable, so clicking the photo also goes to their Wikipedia page.
+5. Create a link saying "Read more on Wikipedia" that links to their wiki page. Consider whether this should open in the same tab or a new tab. If you choose a new tab, remember to include `rel="noopener noreferrer"`.
+6. Make the artist's photo clickable, so clicking the photo also goes to their Wikipedia page (with the same tab consideration).

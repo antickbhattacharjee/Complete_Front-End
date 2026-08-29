@@ -7,7 +7,7 @@ We define a reusable formula inside the function. By using `return`, the functio
 
 ### `script.js`
 ```javascript
-// Function Declaration
+// Arrow function expression assigned to a constant
 const celsiusToFahrenheit = (celsius) => {
     // Calculate and store locally
     let fahrenheit = (celsius * 9/5) + 32;

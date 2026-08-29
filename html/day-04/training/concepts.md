@@ -24,7 +24,7 @@ The "HyperText" in HTML means text with links. Links connect the web together. A
 
 ## 3. Explanation of Syntax
 - `<a>`: Anchor tag, used for links. The `href` attribute tells it *where* to go.
-- `<img>`: Image tag. It is self-closing. The `src` attribute is the path to the image, and the `alt` attribute is the text shown if the image fails to load (also used by screen readers).
+- `<img>`: Image tag. It is a void element—it cannot contain child content and does not have a closing tag. The `src` attribute is the path to the image, and the `alt` attribute is the text shown if the image fails to load (also used by screen readers).
 - `<audio>` & `<video>`: Wrappers for media. The `controls` attribute adds play/pause buttons. `<source>` specifies the file.
 
 ## 4. Examples
@@ -37,11 +37,11 @@ The "HyperText" in HTML means text with links. Links connect the web together. A
 
 ### Intermediate Example (Images and opening links in new tabs)
 ```html
-<!-- Open link in new tab using target="_blank" -->
-<a href="https://google.com" target="_blank">Search</a>
+<!-- Open link in new tab using target="_blank" with security attribute -->
+<a href="https://google.com" target="_blank" rel="noopener noreferrer">Search</a>
 
 <!-- Display an image -->
-<img src="https://via.placeholder.com/150" alt="A grey placeholder image">
+<img src="assets/image-placeholder.svg" alt="A generic landscape placeholder showing mountains and sun" width="150" height="150">
 ```
 
 ### Practical Example (Clickable Image)
@@ -58,7 +58,11 @@ The "HyperText" in HTML means text with links. Links connect the web together. A
 - **Forgetting `controls` on media**: Without the `controls` attribute, your video/audio will not have a play button and will just look like a static picture or be invisible.
 
 ## 6. Best Practices
-- Always use `target="_blank"` when linking to an *external* website so the user doesn't lose your page.
+- Use **relative links** for pages within your own site (e.g., `href="about.html"`).
+- Use **absolute links** for external sites (e.g., `href="https://example.com"`).
+- **`target="_blank"`** opens a link in a new tab. Use it sparingly, only when there is a clear reason (e.g., opening documentation while staying on your page). Most navigation should use the same tab so users don't lose the current page in the back button.
+- When using `target="_blank"`, always include `rel="noopener noreferrer"` to prevent security vulnerabilities.
+- Consider informing users when a link opens a new tab (e.g., via a small icon or text like "(opens in new tab)").
 - Ensure images are optimized for the web (compress them) before linking them.
 
 ## 7. Trainer Notes
@@ -66,5 +70,5 @@ The "HyperText" in HTML means text with links. Links connect the web together. A
 
 ## 8. Quick Revision
 - `<a>` + `href` = Link.
-- `<img>` + `src` + `alt` = Image (self-closing).
+- `<img>` + `src` + `alt` = Image (void element, no closing tag).
 - `<video>` / `<audio>` + `controls` = Multimedia.

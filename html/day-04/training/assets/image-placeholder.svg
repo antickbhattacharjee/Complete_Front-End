@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#e8e8e8"/>
+  
+  <!-- Image frame outline -->
+  <rect x="10" y="10" width="180" height="180" fill="none" stroke="#999" stroke-width="2"/>
+  
+  <!-- Mountain silhouette -->
+  <polygon points="40,120 80,60 120,100 160,50 180,120" fill="#b0b0b0" opacity="0.7"/>
+  
+  <!-- Sun circle -->
+  <circle cx="150" cy="50" r="20" fill="#ffc107" opacity="0.8"/>
+  
+  <!-- Text label -->
+  <text x="100" y="160" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+    Image (200×200)
+  </text>
+</svg>

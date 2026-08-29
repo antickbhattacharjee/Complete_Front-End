@@ -59,14 +59,32 @@ li:hover { background: #f9f9f9; }
 
 ### `script.js`
 ```javascript
+// Safely load movies from localStorage with error handling
+const loadMovies = () => {
+    try {
+        const savedMovies = localStorage.getItem("movieWatchlist");
+        
+        if (!savedMovies) {
+            return [];
+        }
+        
+        const parsedMovies = JSON.parse(savedMovies);
+        
+        // Ensure parsed data is an array
+        return Array.isArray(parsedMovies) ? parsedMovies : [];
+    } catch (error) {
+        console.error("Could not load saved movies:", error);
+        return [];
+    }
+};
+
 // --- 1. DOM Elements ---
 const form = document.getElementById("movie-form");
 const input = document.getElementById("movie-input");
 const list = document.getElementById("movie-list");
 
 // --- 2. State (Data) ---
-// Try to get data from storage, OR default to empty array
-let movies = JSON.parse(localStorage.getItem("movieWatchlist")) || [];
+let movies = loadMovies();
 
 // --- 3. Save Function ---
 const saveToStorage = () => {
@@ -77,6 +95,15 @@ const saveToStorage = () => {
 const renderMovies = () => {
     // Clear current list
     list.innerHTML = "";
+    
+    // Show empty state if no movies
+    if (movies.length === 0) {
+        const emptyMessage = document.createElement("li");
+        emptyMessage.classList.add("empty-state");
+        emptyMessage.textContent = "No movies yet. Add one to get started!";
+        list.appendChild(emptyMessage);
+        return;
+    }
 
     // Loop through state array and build HTML
     movies.forEach((movie) => {
@@ -85,13 +112,15 @@ const renderMovies = () => {
             li.classList.add("watched");
         }
 
-        // Title Span
-        const titleSpan = document.createElement("span");
-        titleSpan.textContent = movie.title;
-        titleSpan.classList.add("movie-title");
+        // Use a button for accessibility (not a clickable span)
+        const toggleBtn = document.createElement("button");
+        toggleBtn.type = "button";
+        toggleBtn.classList.add("movie-title");
+        toggleBtn.textContent = movie.title;
+        toggleBtn.setAttribute("aria-pressed", String(movie.watched));
         
         // Toggle Watched Event
-        titleSpan.addEventListener("click", () => {
+        toggleBtn.addEventListener("click", () => {
             movie.watched = !movie.watched; // Flip boolean
             saveToStorage();
             renderMovies(); // Re-draw
@@ -99,6 +128,7 @@ const renderMovies = () => {
 
         // Delete Button
         const deleteBtn = document.createElement("button");
+        deleteBtn.type = "button";
         deleteBtn.textContent = "Delete";
         deleteBtn.classList.add("delete-btn");
         
@@ -111,7 +141,7 @@ const renderMovies = () => {
         });
 
         // Assemble <li>
-        li.appendChild(titleSpan);
+        li.appendChild(toggleBtn);
         li.appendChild(deleteBtn);
         
         // Add <li> to <ul>
@@ -123,11 +153,16 @@ const renderMovies = () => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     
-    if (input.value.trim() === "") return;
+    // Validate: reject empty and whitespace-only entries
+    const trimmedTitle = input.value.trim();
+    if (trimmedTitle === "") {
+        console.warn("Cannot add empty movie title");
+        return;
+    }
 
     const newMovie = {
         id: Date.now(), // Unique ID based on time
-        title: input.value,
+        title: trimmedTitle,
         watched: false
     };
 
@@ -136,6 +171,7 @@ form.addEventListener("submit", (e) => {
     renderMovies();
 
     input.value = ""; // Clear input
+    input.focus(); // Return focus to input
 });
 
 // --- 6. Initial Load ---
